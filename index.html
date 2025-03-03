@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prince Siboze Portfolio</title>
+    <style>
+        body {
+            font-family: Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            color: white;
+            background: url('background.jpg') no-repeat center center fixed;
+            background-size: cover;
+            animation: moveBackground 10s infinite alternate;
+        }
+        
+        @keyframes moveBackground {
+            0% { background-position: center top; }
+            100% { background-position: center bottom; }
+        }
+        
+        .container {
+            padding: 50px;
+            background: rgba(0, 0, 0, 0.7);
+            margin: 50px auto;
+            width: 80%;
+            border-radius: 10px;
+        }
+        
+        .tabs {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        
+        .tab {
+            padding: 10px 20px;
+            margin: 5px;
+            background: #007BFF;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        
+        .tab:hover {
+            background: #0056b3;
+        }
+        
+        .content {
+            display: none;
+        }
+        
+        .active {
+            display: block;
+        }
+    </style>
+    <script>
+        function showSection(sectionId) {
+            var sections = document.getElementsByClassName('content');
+            for (var i = 0; i < sections.length; i++) {
+                sections[i].classList.remove('active');
+            }
+            document.getElementById(sectionId).classList.add('active');
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to My Portfolio</h1>
+        <div class="tabs">
+            <div class="tab" onclick="showSection('about')">About Me</div>
+            <div class="tab" onclick="showSection('education')">Educational Background</div>
+            <div class="tab" onclick="showSection('certificates')">Additional Certificates</div>
+            <div class="tab" onclick="showSection('skills')">Skills</div>
+            <div class="tab" onclick="showSection('contact')">Contact Details</div>
+        </div>
+        
+        <div id="about" class="content active">
+            <h2>Prince Siboze</h2>
+            <p>ICT Support Services Team Leader | IT Solutions</p>
+            <p>🚀 Empowering Businesses with Reliable IT Support & Security</p>
+            <p>With a Postgraduate Diploma in IT and 2+ years of hands-on experience...</p>
+        </div>
+        
+        <div id="education" class="content">
+            <h2>Educational Background</h2>
+            <p>Postgraduate Diploma In Information Technology: Vaal University of Technology</p>
+            <p>Advanced Diploma In Information Technology: Vaal University of Technology</p>
+            <p>Diploma In Information Technology: Vaal University of Technology</p>
+            <p>National Senior Certificate: Inkomazi Secondary School</p>
+        </div>
+        
+        <div id="certificates" class="content">
+            <h2>Additional Certificates</h2>
+            <p>Microsoft 365 Fundamentals</p>
+            <p>Microsoft Certified Azure AI Fundamentals</p>
+            <p>ITIL v4 ® Foundation (IT Service Management)</p>
+            <p>Microsoft Certified: Security Operations Analyst</p>
+            <p>HPE Accredited Technical Professional (Hybrid Cloud)</p>
+            <p>Microsoft Certified Power Automate RPA Developer Associate</p>
+            <p>Microsoft Certified Security, Compliance, and Identity Fundamentals</p>
+            <p>Microsoft Certified: Information Protection Administrator</p>
+            <p>National Certificate: Information Technology: Systems Support (NQF 5)</p>
+        </div>
+        
+        <div id="skills" class="content">
+            <h2>Skills</h2>
+            <h3>Professional Skills</h3>
+            <p>Technical Support, Cyber Security, Networking, MS Exchange Online...</p>
+            <h3>Personal Skills</h3>
+            <p>Communication, Teamwork, Problem-solving, Time Management...</p>
+        </div>
+        
+        <div id="contact" class="content">
+            <h2>Contact Details</h2>
+            <p>Location: Gauteng, Tembisa</p>
+            <p>Cellphone: 082-638-5869 | Alt: 074-299-7551</p>
+            <p>Email: princesiboze@gmail.com</p>
+            <p>Driver’s license: Code C1</p>
+        </div>
+    </div>
+</body>
+</html>
